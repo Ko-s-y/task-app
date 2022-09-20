@@ -65,6 +65,7 @@ GEM
     ast (2.4.2)
     autoprefixer-rails (10.4.2.0)
       execjs (~> 2)
+    bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.13.0)
       msgpack (~> 1.2)
@@ -175,6 +176,8 @@ GEM
     rails-i18n (7.0.5)
       i18n (>= 0.7, < 2)
       railties (>= 6.0.0, < 8)
+    rails_autolink (1.1.6)
+      rails (> 3.1)
     railties (6.1.7)
       actionpack (= 6.1.7)
       activesupport (= 6.1.7)
@@ -301,6 +304,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.4)
   bootstrap
   byebug
@@ -316,6 +320,7 @@ DEPENDENCIES
   rails (~> 6.1.4)
   rails-erd
   rails-i18n
+  rails_autolink
   rspec-rails
   rubocop-airbnb
   sass-rails (>= 6)
