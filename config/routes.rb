@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'login', to: 'sessions#new'
+  get 'login', to: 'sessions#new' # ログイン画面
 
   namespace :admin do
     resources :users
