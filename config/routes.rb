@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   get 'login', to: 'sessions#new' # ログイン画面
   post 'login', to: 'sessions#create' # ログイン処理
   delete 'logout', to: 'sessions#destroy' # ログアウト処理
