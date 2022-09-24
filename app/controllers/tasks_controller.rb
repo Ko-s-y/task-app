@@ -22,6 +22,12 @@ class TasksController < ApplicationController
   def create
     # @task = Task.new(task_params.merge(user_id: current_user.id))
     @task = current_user.tasks.new(task_params)
+
+    if params[:back].present?
+      render :new
+      return
+    end
+
     if @task.save
       # logger.debug "task: #{@task.attributes.inspect}"
       redirect_to task_path(@task.id), notice: "タスク「#{@task.name}」を登録しました。"
