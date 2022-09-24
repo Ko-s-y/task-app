@@ -68,3 +68,5 @@ gem 'bootstrap'
 gem 'rails-i18n'
 
 gem 'rails_autolink'
+
+gem 'ransack'
