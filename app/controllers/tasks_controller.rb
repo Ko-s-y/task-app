@@ -40,6 +40,7 @@ class TasksController < ApplicationController
 
     if @task.save
       # logger.debug "task: #{@task.attributes.inspect}"
+      SampleJob.perform_later
       redirect_to task_path(@task.id), notice: "タスク「#{@task.name}」を登録しました。"
     else
       render :new
