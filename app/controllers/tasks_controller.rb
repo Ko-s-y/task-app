@@ -40,7 +40,7 @@ class TasksController < ApplicationController
 
     if @task.save
       # logger.debug "task: #{@task.attributes.inspect}"
-      SampleJob.perform_later
+      # SampleJob.perform_later
       redirect_to task_path(@task.id), notice: "タスク「#{@task.name}」を登録しました。"
     else
       render :new
@@ -57,7 +57,8 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    redirect_to tasks_path, notice: "タスク「#{@task.name}」を削除しました。"
+    # head :no_content
+    # redirect_to tasks_path, notice: "タスク「#{@task.name}」を削除しました。"
   end
 
   private
